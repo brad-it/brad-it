@@ -71,9 +71,11 @@ set LHOST <your IP>
 run
 
 ### ✅ Shell Access
+```
 
-![Processes](images/thm-blue-exploit-success.png)
+![Exploit Success](images/thm-blue-exploit-success.png)
 
+---
 ## 🚀 Privilege Escalation
 Now it is time to escalate our privileges by trying to find a process running as SYSTEM
 

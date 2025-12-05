@@ -125,4 +125,3 @@ C:\Users\Jon\Documents\flag3.txt
 
 ---
 
-⚠️ For educational purposes only.

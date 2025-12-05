@@ -15,7 +15,6 @@
 - [Privilege Escalation](#-privilege-escalation)
   - [LXD Group Discovery](#lxd-group-discovery)
   - [Exploiting LXD via Alpine Builder](#exploiting-lxd-via-alpine-builder)
-- [Root Access](#-root-access)
 - [Summary](#-summary)
 - [Tools Used](#-tools-used)
 - [Disclaimer](#-disclaimer)
@@ -37,10 +36,11 @@ nmap -p- -T4 target_ip
     Port 80 – HTTP
 
 📸 Screenshot:
+
 ![Nmap Scan](images/nmap_scan.png)
 
-🕵️ Reconnaissance & Enumeration
-Gobuster Directory Enumeration
+## 🕵️ Reconnaissance & Enumeration
+## Gobuster Directory Enumeration
 
 I used Gobuster to identify hidden directories:
 
@@ -51,9 +51,10 @@ gobuster dir -u http://target_ip -w /usr/share/wordlists/dirb/common.txt
 ✅ Result: A hidden /secret directory was discovered.
 
 📸 Screenshot:
+
 ![Gobuster](images/gobuster.png)
 
-Source Code Review
+## Source Code Review
 
 While inspecting the website source code, I found a possible username embedded in the page:
 
@@ -64,6 +65,7 @@ view-source:http://target_ip
 ✅ Username discovered: john
 
 📸 Screenshot:
+
 ![Username Found](images/username_found.png)
 
 Secret Directory Discovery
@@ -77,11 +79,12 @@ http://target_ip/secret
 I discovered a private SSH key, but it was encrypted with a passphrase:
 
 📸 Screenshot:
+
 ![SSH Key](images/ssh_rsakey.png)
 
 
-🚪 Initial Access
-Cracking the SSH Key Passphrase
+## 🚪 Initial Access
+## Cracking the SSH Key Passphrase
 
 I converted the SSH key into a crackable format:
 ```bash
@@ -97,9 +100,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ✅ Passphrase successfully cracked
 
 📸 Screenshot:
+
 ![Cracking Passphrase](images/cracking_passphrase.png)
 
-SSH Access Gained
+## SSH Access Gained
 
 I logged in using the decrypted private key:
 
@@ -115,8 +119,8 @@ cat ~/user.txt
 
 ✅ User access obtained
 
-⬆️ Privilege Escalation
-LXD Group Discovery
+## ⬆️ Privilege Escalation
+## LXD Group Discovery
 
 I checked my group memberships:
 
@@ -126,11 +130,12 @@ id
 
 ✅ Output showed:
 📸 Screenshot:
+
 ![LXD Group](images/lxd.png)
 
 This is a known privilege escalation vector.
 
-Exploiting LXD via Alpine Builder
+## Exploiting LXD via Alpine Builder
 
 I cloned the Alpine image builder on my local machine:
 
@@ -171,16 +176,17 @@ cat /mnt/root/root/root.txt
 ✅ ROOT ACCESS SUCCESSFULLY ACHIEVED
 
 📸 Screenshot:
+
 ![Privilege Escalation](images/privilege_escalation.png)
 
-✅ Summary
+## ✅ Summary
 Phase	Result
 Nmap Scan	Found SSH & HTTP
 Enumeration	Username & secret directory
 Initial Access	Cracked SSH private key
 Privilege Escalation	LXD Alpine exploit
 Final Result	Root Access
-📌 Tools Used
+## 📌 Tools Used
 
     Nmap
 
@@ -196,7 +202,7 @@ Final Result	Root Access
 
     Python HTTP Server
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This walkthrough is for educational purposes only and was performed in a controlled lab environment.
 

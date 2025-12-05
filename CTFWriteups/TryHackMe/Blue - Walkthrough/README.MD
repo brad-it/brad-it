@@ -79,7 +79,7 @@ run
 
 ### Running Processes
 
-```bash
+
 ps
 ```
 

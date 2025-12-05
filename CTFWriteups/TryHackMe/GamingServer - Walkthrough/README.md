@@ -7,8 +7,6 @@
 - [Nmap Scan](#-nmap-scan)
 - [Reconnaissance & Enumeration](#-reconnaissance--enumeration)
   - [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
-  - [Source Code Review](#source-code-review)
-  - [Secret Directory Discovery](#secret-directory-discovery)
 - [Initial Access](#-initial-access)
   - [Cracking the SSH Key Passphrase](#cracking-the-ssh-key-passphrase)
   - [SSH Access Gained](#ssh-access-gained)
@@ -40,7 +38,7 @@ nmap -p- -T4 target_ip
 ![Nmap Scan](images/nmap_scan.png)
 
 ## 🕵️ Reconnaissance & Enumeration
-## Gobuster Directory Enumeration
+Gobuster Directory Enumeration
 
 I used Gobuster to identify hidden directories:
 
@@ -54,7 +52,7 @@ gobuster dir -u http://target_ip -w /usr/share/wordlists/dirb/common.txt
 
 ![Gobuster](images/gobuster.png)
 
-## Source Code Review
+Source Code Review
 
 While inspecting the website source code, I found a possible username embedded in the page:
 

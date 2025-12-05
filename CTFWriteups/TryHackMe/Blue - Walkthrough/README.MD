@@ -73,13 +73,7 @@ run
 ### ✅ Shell Access
 ---
 
-![Shell Access](images/THM - blue-exploit-success.png)
-
 ## 🚀 Privilege Escalation
-
-```bash
-sessions -u 1
-```
 
 ---
 

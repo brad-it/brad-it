@@ -1,0 +1,179 @@
+# 🛡️ TryHackMe – Blue Room | GitHub Write-Up
+
+---
+
+## 🔵 Introduction
+
+This write-up documents my investigation and exploitation of the **Blue Room** on TryHackMe, a Windows-based vulnerable machine designed to simulate a real-world SMB exploitation scenario. As an IT Helpdesk professional actively transitioning into cybersecurity, this room helped reinforce key skills in **network enumeration, vulnerability identification, exploitation, privilege escalation, and post-exploitation forensics** from both an offensive and defensive (Blue Team) perspective.
+
+---
+
+## 🔎 Initial Enumeration
+
+### Nmap Port Scan
+
+```bash
+nmap -p 1-999 10.10.239.14
+```
+
+### Results
+
+```
+Host is up (0.13s latency).
+Not shown: 996 closed tcp ports (reset)
+
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+```
+
+📸 **Screenshot:**
+
+```md
+![Nmap Basic Scan](images/nmap-basic.png)
+```
+
+The results confirmed that **SMB services were exposed**, which is a common attack surface for Windows targets.
+
+---
+
+## ⚠️ Vulnerability Scanning
+
+### Open Ports Identified
+
+```
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49158/tcp open  unknown
+49160/tcp open  unknown
+```
+
+### SMB Vulnerability Results
+
+```
+smb-vuln-ms17-010:
+VULNERABLE: Remote Code Execution vulnerability in Microsoft SMBv1 (ms17-010)
+State: VULNERABLE
+CVE: CVE-2017-0143
+Risk Factor: HIGH
+```
+
+✅ The system was confirmed to be vulnerable to **EternalBlue (MS17-010)**.
+
+📸 **Screenshot:**
+
+```md
+![Nmap Vulnerability Scan](images/nmap-vuln.png)
+```
+
+---
+
+## 💥 Exploitation
+
+Using **Metasploit**, I searched for and loaded the EternalBlue exploit module and configured the required options:
+
+* `RHOSTS` – Target IP
+* `LHOST` – Attacker IP
+* Payload selection
+
+After running the exploit, I successfully gained an initial shell on the system.
+
+📸 **Screenshots:**
+
+```md
+![Metasploit Module](images/metasploit-module.png)
+![Successful Exploitation](images/exploit-success.png)
+```
+
+---
+
+## ⬆️ Privilege Escalation
+
+Once access was established, I:
+
+* Upgraded to a **Meterpreter session**
+* Enumerated running processes
+* Migrated into a **SYSTEM-level process**
+
+This granted me full administrative control of the machine.
+
+📸 **Screenshots:**
+
+```md
+![Process List](images/process-list.png)
+![System Migration](images/system-migration.png)
+```
+
+---
+
+## 🔐 Credential Dumping
+
+After achieving SYSTEM privileges, I dumped the **NTLM password hashes** from the system. The hash belonging to the user **Jon** was cracked using **CrackStation**, revealing valid credentials.
+
+📸 **Screenshot:**
+
+```md
+![Hash Dump](images/hashdump.png)
+```
+
+---
+
+## 🚩 Flag Discovery
+
+All three flags were located successfully at the following locations:
+
+| Flag   | Location                               |
+| ------ | -------------------------------------- |
+| Flag 1 | `C:\flagt1.txt`                        |
+| Flag 2 | `C:\Windows\System32\config\flag2.txt` |
+| Flag 3 | `C:\Users\Jon\Documents\flag3.txt`     |
+
+📸 **Screenshots:**
+
+```md
+![Flag 1](images/flag1.png)
+![Flag 2](images/flag2.png)
+![Flag 3](images/flag3.png)
+```
+
+✅ All flags captured successfully.
+
+---
+
+## ✅ Skills Demonstrated
+
+* Network Enumeration (Nmap)
+* SMB Vulnerability Identification
+* EternalBlue (MS17-010) Exploitation
+* Meterpreter Usage
+* Privilege Escalation
+* NTLM Hash Dumping & Cracking
+* Windows File System Navigation
+
+---
+
+## 🛡️ Blue Team Mitigation Notes
+
+From a defensive perspective, this attack could have been prevented by:
+
+* Applying Windows security patches
+* Disabling SMBv1
+* Restricting SMB exposure to internal networks only
+* Implementing IDS/IPS signatures for EternalBlue
+* Monitoring abnormal SMB traffic and exploit behavior
+
+---
+
+## 🎯 Final Thoughts
+
+This lab demonstrated how a **single unpatched vulnerability** can lead to full system compromise. It reinforced both offensive exploitation techniques and defensive security best practices that are critical for SOC analysts and Blue Team roles.
+
+---
+
+✅ *This write-up is GitHub-ready. Simply create an `images/` folder in your repository and upload your screenshots using the exact filenames listed above.*

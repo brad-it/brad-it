@@ -28,12 +28,6 @@ PORT    STATE SERVICE
 445/tcp open  microsoft-ds
 ```
 
-📸 **Screenshot:**
-
-```md
-![Nmap Basic Scan](images/nmap-basic.png)
-```
-
 The results confirmed that **SMB services were exposed**, which is a common attack surface for Windows targets.
 
 ---
@@ -65,12 +59,6 @@ Risk Factor: HIGH
 ```
 
 ✅ The system was confirmed to be vulnerable to **EternalBlue (MS17-010)**.
-
-📸 **Screenshot:**
-
-```md
-![Nmap Vulnerability Scan](images/nmap-vuln.png)
-```
 
 ---
 
@@ -134,14 +122,6 @@ All three flags were located successfully at the following locations:
 | Flag 2 | `C:\Windows\System32\config\flag2.txt` |
 | Flag 3 | `C:\Users\Jon\Documents\flag3.txt`     |
 
-📸 **Screenshots:**
-
-```md
-![Flag 1](images/flag1.png)
-![Flag 2](images/flag2.png)
-![Flag 3](images/flag3.png)
-```
-
 ✅ All flags captured successfully.
 
 ---
@@ -175,5 +155,3 @@ From a defensive perspective, this attack could have been prevented by:
 This lab demonstrated how a **single unpatched vulnerability** can lead to full system compromise. It reinforced both offensive exploitation techniques and defensive security best practices that are critical for SOC analysts and Blue Team roles.
 
 ---
-
-✅ *This write-up is GitHub-ready. Simply create an `images/` folder in your repository and upload your screenshots using the exact filenames listed above.*

@@ -1,16 +1,87 @@
-## Hi there 👋
+🛡️ Cybersecurity Enthusiast | IT Helpdesk Professional
+👋 About Me
 
-<!--
-**brad-it/brad-it** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I currently work in IT Helpdesk, where I support users, troubleshoot systems, and maintain a secure, reliable IT environment. I am deeply passionate about Cybersecurity and actively developing hands-on skills to defend systems, networks, and data from modern cyber threats.
 
-Here are some ideas to get you started:
+This GitHub is used to document my learning journey, labs, tools, and security projects.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔥 What I’m Focused On
+
+Network Security & Traffic Analysis
+
+Threat Detection & Incident Response
+
+Ethical Hacking & Penetration Testing
+
+Security Automation & Scripting
+
+SOC Analysis
+
+🧠 Skills & Knowledge
+
+✅ Windows & Linux Security
+
+✅ Networking (TCP/IP, DNS, Firewalls)
+
+✅ Vulnerability Scanning
+
+✅ Networking
+
+✅ Security Best Practices
+
+🛠️ Tools I Use
+
+Nmap
+
+Metasploit
+
+Wireshark
+
+Burp Suite
+
+Kali Linux
+
+Python, Bash, PowerShell
+
+🧪 Labs & Projects
+
+🔐 Home cybersecurity lab with virtual machines
+
+🕵️ Network scanning & vulnerability testing
+
+🧑‍💻 Capture The Flag (CTF) practice
+
+🧾 Incident response simulations
+
+🔧 Security automation scripts
+
+
+📜 Certifications & Learning
+
+CompTIA Security+ (in progress / planned)
+
+TryHackMe Learning Paths
+
+Hack The Box Labs
+
+🚀 Current Goals
+
+✅ Transition from IT Helpdesk to Cybersecurity
+
+✅ Build the fundamentals of SOC
+
+✅ Earn Security+ Certification
+
+✅ Build a public portfolio of security projects
+
+✅ Develop cloud security skills
+
+🤝 Connect With Me
+
+Discord: IAmRevolutionZ
+
+GitHub: https://github.com/brad-it
+
+🧾 Motto
+
+“Security is not a product — it’s a process.”

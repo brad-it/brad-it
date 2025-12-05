@@ -109,10 +109,11 @@ The password for user **Jon** can be cracked using **CrackStation**.
 
 ## 🚩 Finding the Flags
 
-```
+```bash
 C:\flag1.txt
 C:\Windows\System32\config\flag2.txt
 C:\Users\Jon\Documents\flag3.txt
+```
 
 ## ✅ Summary
 
@@ -122,6 +123,4 @@ C:\Users\Jon\Documents\flag3.txt
 - Migrated to SYSTEM for privilege escalation
 - Dumped NTLM hashes
 - Retrieved all 3 flags
-
----
 

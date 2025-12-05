@@ -15,7 +15,6 @@
   - [Exploiting LXD via Alpine Builder]
 - [Summary](#-summary)
 - [Tools Used](#-tools-used)
-- [Disclaimer](#-disclaimer)
 
 ---
 
@@ -82,7 +81,7 @@ I discovered a private SSH key, but it was encrypted with a passphrase:
 
 
 ## 🚪 Initial Access
-## Cracking the SSH Key Passphrase
+Cracking the SSH Key Passphrase
 
 I converted the SSH key into a crackable format:
 ```bash
@@ -101,7 +100,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 
 ![Cracking Passphrase](images/cracking_passphrase.png)
 
-## SSH Access Gained
+SSH Access Gained
 
 I logged in using the decrypted private key:
 
@@ -118,7 +117,7 @@ cat ~/user.txt
 ✅ User access obtained
 
 ## ⬆️ Privilege Escalation
-## LXD Group Discovery
+LXD Group Discovery
 
 I checked my group memberships:
 
@@ -133,7 +132,7 @@ id
 
 This is a known privilege escalation vector.
 
-## Exploiting LXD via Alpine Builder
+Exploiting LXD via Alpine Builder
 
 I cloned the Alpine image builder on my local machine:
 
@@ -200,7 +199,5 @@ Final Result	Root Access
 
     Python HTTP Server
 
-## ⚠️ Disclaimer
 
-This walkthrough is for educational purposes only and was performed in a controlled lab environment.
 

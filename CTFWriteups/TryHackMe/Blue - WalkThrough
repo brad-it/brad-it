@@ -87,7 +87,7 @@ After running the exploit, I successfully gained an initial shell on the system.
 📸 **Screenshots:**
 
 ```md
-![Metasploit Module](https://github.com/brad-it/brad-it/blob/main/CTFWriteups/images/THM%20-%20blue-metasploit-module.png)
+![Metasploit Module](https://github.com/brad-it/brad-it/blob/94d9307b8e7e9fcc574287844ca0519b482bd0d3/CTFWriteups/images/THM%20-%20blue-metasploit-module.png)
 ![Successful Exploitation](images/exploit-success.png)
 ```
 

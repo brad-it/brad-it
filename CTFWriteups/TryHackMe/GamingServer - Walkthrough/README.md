@@ -52,6 +52,7 @@ gobuster dir -u http://target_ip -w /usr/share/wordlists/dirb/common.txt
 
 📸 Screenshot:
 ![Gobuster](images/gobuster.png)
+
 Source Code Review
 
 While inspecting the website source code, I found a possible username embedded in the page:
@@ -64,6 +65,7 @@ view-source:http://target_ip
 
 📸 Screenshot:
 ![Username Found](images/username_found.png)
+
 Secret Directory Discovery
 
 Browsing to:
@@ -73,6 +75,7 @@ http://target_ip/secret
 ```
 
 I discovered a private SSH key, but it was encrypted with a passphrase:
+
 📸 Screenshot:
 ![SSH Key](images/ssh_rsakey.png)
 
@@ -95,6 +98,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 
 📸 Screenshot:
 ![Cracking Passphrase](images/cracking_passphrase.png)
+
 SSH Access Gained
 
 I logged in using the decrypted private key:
@@ -167,7 +171,7 @@ cat /mnt/root/root/root.txt
 ✅ ROOT ACCESS SUCCESSFULLY ACHIEVED
 
 📸 Screenshot:
-https://PASTE_IMAGE_LINK_HERE/lxd_exploit.png
+![Privilege Escalation](images/privilege_escalation.png)
 
 ✅ Summary
 Phase	Result

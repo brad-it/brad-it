@@ -6,13 +6,13 @@
 
 - [Nmap Scan](#-nmap-scan)
 - [Reconnaissance & Enumeration](#-reconnaissance--enumeration)
-  - [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
+  - [Gobuster Directory Enumeration]
 - [Initial Access](#-initial-access)
-  - [Cracking the SSH Key Passphrase](#cracking-the-ssh-key-passphrase)
-  - [SSH Access Gained](#ssh-access-gained)
+  - [Cracking the SSH Key Passphrase]
+  - [SSH Access Gained]
 - [Privilege Escalation](#-privilege-escalation)
-  - [LXD Group Discovery](#lxd-group-discovery)
-  - [Exploiting LXD via Alpine Builder](#exploiting-lxd-via-alpine-builder)
+  - [LXD Group Discovery]
+  - [Exploiting LXD via Alpine Builder]
 - [Summary](#-summary)
 - [Tools Used](#-tools-used)
 - [Disclaimer](#-disclaimer)
@@ -43,7 +43,7 @@ Gobuster Directory Enumeration
 I used Gobuster to identify hidden directories:
 
 ```bash
-gobuster dir -u http://target_ip -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http://target_ip -w {file path to wordlist file}
 ```
 
 ✅ Result: A hidden /secret directory was discovered.

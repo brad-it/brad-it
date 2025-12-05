@@ -59,7 +59,7 @@ msfconsole
 use exploit/windows/smb/ms17_010_eternalblue
 ```
 
-![Exploit Loaded]("images/THM - blue-metasploit-module.png")
+![Exploit Loaded](images/thm-blue-metasploit-module.png)
 
 ---
 
@@ -72,6 +72,7 @@ run
 
 ### ✅ Shell Access
 
+![Processes](images/thm-blue-exploit-success.png)
 
 ## 🚀 Privilege Escalation
 Now it is time to escalate our privileges by trying to find a process running as SYSTEM

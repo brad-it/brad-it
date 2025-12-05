@@ -81,11 +81,9 @@ Now it is time to escalate our privileges by trying to find a process running as
 
 ### Running Processes
 
-
-ps
 ```
 
-![Processes](images/thm-blue-process-list.png)
+![Process List](images/thm-blue-process-list.png)
 
 ---
 

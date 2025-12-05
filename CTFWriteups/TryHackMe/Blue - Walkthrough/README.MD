@@ -71,10 +71,9 @@ set LHOST <your IP>
 run
 
 ### ✅ Shell Access
+---
 
 ![Shell Access](images/THM - blue-exploit-success.png)
-
----
 
 ## 🚀 Privilege Escalation
 

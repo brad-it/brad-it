@@ -91,12 +91,8 @@ This granted me full administrative control of the machine.
 
 📸 **Screenshots:**
 
-```md
-![Process List](images/process-list.png)
-![System Migration](images/system-migration.png)
-```
-
----
+![Process List](CTFWriteups/TryHackMe/images/thm-blue-process-list.png)
+![System Migration](CTFWriteups/TryHackMe/images/thm-blue-process-migration.png)
 
 ## 🔐 Credential Dumping
 
@@ -104,9 +100,7 @@ After achieving SYSTEM privileges, I dumped the **NTLM password hashes** from th
 
 📸 **Screenshot:**
 
-```md
-![Hash Dump](images/hashdump.png)
-```
+![Hash Dump](CTFWriteups/TryHackMe/images/thm-blue-hashdump.png)
 
 ---
 

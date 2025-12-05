@@ -74,7 +74,7 @@ After running the exploit, I successfully gained an initial shell on the system.
 
 📸 **Screenshots:**
 
-![Metasploit Module](images/thm-blue-metasploit-module.png)
+![Metasploit Module](CTFWriteups/TryHackMe/images/thm-blue-metasploit-module.png)
 ![Successful Exploitation](images/exploit-success.png)
 
 ---

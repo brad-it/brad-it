@@ -1,5 +1,7 @@
 # 🛡️ SOC Analyst Notes – Complete Beginner to Advanced SOC Guide 🚨
 
+Wiki Link: https://github.com/brad-it/brad-it/wiki/SOC-Wiki-Page
+
 Welcome to the **SOC Analyst Notes Repository** — a learning hub** for mastering the **Security Operations Center (SOC)** ecosystem.  
 From **incident response** to **threat hunting**, **SIEM mastery** to **phishing detection**
 
@@ -8,8 +10,7 @@ From **incident response** to **threat hunting**, **SIEM mastery** to **phishing
 ## 📚 Explore Wiki Topics
 
 1. [Introduction to SOC](https://github.com/MaheshShukla1/Soc-prep/wiki/Introduction-To-SOC#6-case-study-responding-to-a-phishing-attack)  
-2. [Cyber Defence
- Framework](https://github.com/MaheshShukla1/Soc-prep/wiki/Cyber-Defence-Framework)  
+2. [Cyber Defence Framework](https://github.com/MaheshShukla1/Soc-prep/wiki/Cyber-Defence-Framework)  
 3. [Cyber Threat Intelligence (CTI)](https://github.com/MaheshShukla1/SOC_NOTES_2024/wiki/Cyber-Threat-intelligence)  
 4. [Network Traffic Analysis](https://github.com/MaheshShukla1/SOC-Security-Notes/wiki/Network-Traffic-Analysis)  
 5. [Phishing Detection & Response](https://github.com/MaheshShukla1/SOC-Analyst-Notes/wiki/Phishing-Attacks:-Understanding,-Detection,-and-Prevention-Strategies)  

@@ -1,4 +1,6 @@
-# 🛡️ SOC Analyst Notes – Complete Beginner to Advanced SOC Guide 🚨
+# 🛡️ SOC Analyst Notes  - Aspiring SOC Analyst | Blue Team | Cloud Security (Azure) | Automation with Python & PowerShell
+
+Cybersecurity professional transitioning from MSP Helpdesk to SOC Analyst with hands-on experience in Active Directory, Azure, SIEM monitoring, and security automation. Building real-world detection engineering and incident response skills through structured labs, TryHackMe, and a personal SOC home lab.
 
 Wiki Link: https://github.com/brad-it/brad-it/wiki/SOC-Wiki-Page
 
@@ -9,14 +11,13 @@ From **incident response** to **threat hunting**, **SIEM mastery** to **phishing
 
 ## 📚 Explore Wiki Topics
 
-1. [Introduction to SOC](https://github.com/MaheshShukla1/Soc-prep/wiki/Introduction-To-SOC#6-case-study-responding-to-a-phishing-attack)  
-2. [Cyber Defence Framework](https://github.com/MaheshShukla1/Soc-prep/wiki/Cyber-Defence-Framework)  
-3. [Cyber Threat Intelligence (CTI)](https://github.com/MaheshShukla1/SOC_NOTES_2024/wiki/Cyber-Threat-intelligence)  
-4. [Network Traffic Analysis](https://github.com/MaheshShukla1/SOC-Security-Notes/wiki/Network-Traffic-Analysis)  
-5. [Phishing Detection & Response](https://github.com/MaheshShukla1/SOC-Analyst-Notes/wiki/Phishing-Attacks:-Understanding,-Detection,-and-Prevention-Strategies)  
-6. [Alert Management & Triage](https://github.com/MaheshShukla1/SOC-Analyst-Notes/wiki/Alert-Management-&-Triage)  
-7. [Log Analysis Basics](https://github.com/MaheshShukla1/SOC-Analyst-Notes/wiki/Log-Analysis-Basics)
-   
+1. [Introduction To SOC](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Introduction-To-SOC)
+2. [Cyber Defence Framework](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Cyber-Threat-Intelligence-(CTI))
+3. [Cyber Threat Intelligence (CTI)](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Cyber-Threat-Intelligence-(CTI))
+4. [Network Traffic Analysis](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Network-Traffic-Analysis)
+5. [Phishing Detection & Response](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Phishing-Detection-&-Response)
+6. [Alert Management & Triage](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Alert-Management-&-Triage)
+7. [Log Analysis Basics](https://github.com/brad-it/brad-it/wiki/SOC-%E2%80%90-Log-Analysis-Basics)
 ---
 
 ## 🧩 Core Learning Modules
@@ -31,10 +32,6 @@ From **incident response** to **threat hunting**, **SIEM mastery** to **phishing
 ✅ **Automation & Alerting** – Streamline SOC workflows with automation  
 ✅ **People, Process, Technology** – Align roles, tools, and procedures  
 ✅ **Log Analysis Basics** – Identify, interpret, and retain critical logs  
-
-Aspiring SOC Analyst | Blue Team | Cloud Security (Azure) | Automation with Python & PowerShell
-
-Cybersecurity professional transitioning from MSP Helpdesk to SOC Analyst with hands-on experience in Active Directory, Azure, SIEM monitoring, and security automation. Building real-world detection engineering and incident response skills through structured labs, TryHackMe, and a personal SOC home lab.
 
 🔐 Current Focus
 

@@ -1,7 +1,7 @@
 # 🛡️ SOC Analyst Notes – Complete Beginner to Advanced SOC Guide 🚨
 
-Welcome to the **SOC Analyst Notes Repository** — a **comprehensive, SEO-optimized learning hub** for mastering the **Security Operations Center (SOC)** ecosystem.  
-From **incident response** to **threat hunting**, **SIEM mastery** to **phishing detection**, this guide equips you with the skills and knowledge to excel as a SOC professional.
+Welcome to the **SOC Analyst Notes Repository** — a learning hub** for mastering the **Security Operations Center (SOC)** ecosystem.  
+From **incident response** to **threat hunting**, **SIEM mastery** to **phishing detection**
 
 ---
 
